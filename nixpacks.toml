@@ -1,6 +1,7 @@
 
 [phases]
-  build = "npx metrists build -o dist"
+  [phases.build]
+    command = "npx metrists build -o dist"
 
 [variables]
   DIST_DIR = "dist"
