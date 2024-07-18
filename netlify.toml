@@ -1,0 +1,3 @@
+[build]
+publish = "dist"
+command = "npx metrists build -o dist"
