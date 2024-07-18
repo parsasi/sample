@@ -7,7 +7,7 @@
 
 [build]
   [build.outputs]
-    dist = { path = "\${DIST_DIR}" }
+    dist = { path = "${DIST_DIR}" }
 
 [static]
   build_output = "dist"
