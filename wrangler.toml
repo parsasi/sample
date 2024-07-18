@@ -1,9 +1,0 @@
-type = "javascript"
-
-[build]
-command = "npx metrists build -o dist"
-destination = "dist"
-
-[site]
-bucket = "./dist"
-entry-point = "."
