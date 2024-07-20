@@ -1,8 +1,8 @@
-providers = ['node']
+[phases.setup]
+nixPkgs = ['node']
 
-[phases]
-  [phases.build]
-    command = "npx metrists build -o dist"
+[phases.build]
+cmds = ['npx metrists build -o dist']
 
 [start]
-  command = "cd dist && npx serve -s"
+cmd = 'cd dist && npx serve -s'
