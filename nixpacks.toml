@@ -4,5 +4,12 @@ providers = ['node']
   [phases.build]
     command = "npx metrists build -o dist"
 
+[variables]
+  DIST_DIR = "dist"
+
+[build]
+  [build.outputs]
+    dist = { path = "${DIST_DIR}" }
+
 [start]
   command = "cd dist && npx serve -s"
