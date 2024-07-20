@@ -1,5 +1,4 @@
-[phases.setup]
-nixPkgs = ['node']
+providers = ['node']
 
 [phases.build]
 cmds = ['npx metrists build -o dist']
