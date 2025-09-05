@@ -11,7 +11,7 @@ export default $config({
   async run() {
     return new sst.aws.StaticSite("MySite", {
       build: {
-        command: "cd .metrists && npm run build --force",
+        command: "npx metrists build -o out",
         output: ".metrists/out",
       },
     });
