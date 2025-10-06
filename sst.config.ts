@@ -9,11 +9,16 @@ export default $config({
     };
   },
   async run() {
-    return new sst.aws.StaticSite("MySite", {
-      build: {
-        command: "npx metrists build --verbose -o out",
-        output: ".metrists/out",
-      },
-    });
+    try {
+      return new sst.aws.StaticSite("MySite", {
+        build: {
+          command: "npx metrists build --verbose -o out",
+          output: ".metrists/out",
+        },
+      });
+    } catch (e) {
+      console.error(e);
+      throw e;
+    }
   },
 });
