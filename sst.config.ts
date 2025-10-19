@@ -12,7 +12,7 @@ export default $config({
     try {
       return new sst.aws.StaticSite("MySite", {
         build: {
-          command: "npx metrists build -o .metrists",
+          command: "npx metrists build -o .metrists --verbose",
           output: ".metrists",
         },
       });
