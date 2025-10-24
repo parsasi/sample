@@ -1,0 +1,262 @@
+Created stack 'production'
+Updating (production):
+
+@ updating....
+ +  pulumi:pulumi:Stack samplebook-production creating (0s) 
+ +  sst:aws:StaticSite samplebook creating (0s) 
+ +  sst:sst:LinkRef samplebookLinkRef creating (0s) 
+ +  sst:aws:CDN samplebookCdn creating (0s) 
+ +  sst:aws:Bucket samplebookAssets creating (0s) 
+@ updating.....
+ +  command:local:Command samplebookBuilder creating (0s) 
+ +  aws:s3:BucketV2 samplebookAssetsBucket creating (0s) 
+ +  aws:cloudfront:KeyValueStore samplebookKvStore creating (0s) 
+@ updating......
+ +  aws:s3:BucketV2 samplebookAssetsBucket created (2s) 
+ +  aws:s3:BucketCorsConfigurationV2 samplebookAssetsCors creating (0s) 
+ +  aws:s3:BucketPublicAccessBlock samplebookAssetsPublicAccessBlock creating (0s) 
+ +  aws:s3:BucketPublicAccessBlock samplebookAssetsPublicAccessBlock created (0.43s) 
+ +  aws:s3:BucketPolicy samplebookAssetsPolicy creating (0s) 
+ +  aws:s3:BucketCorsConfigurationV2 samplebookAssetsCors created (0.61s) 
+ +  aws:s3:BucketPolicy samplebookAssetsPolicy created (0.37s) 
+@ updating................
+ +  command:local:Command samplebookBuilder created (16s) 
+ +  aws:cloudfront:KeyValueStore samplebookKvStore created (15s) 
+ +  aws:cloudfront:Function samplebookCloudfrontFunctionRequest creating (0s) 
+ +  pulumi-nodejs:dynamic:Resource samplebookKvKeys.sst.aws.KvKeys creating (0s) 
+ +  pulumi-nodejs:dynamic:Resource samplebookAssetFiles.sst.aws.BucketFiles creating (0s) 
+@ updating....
+ +  pulumi-nodejs:dynamic:Resource samplebookKvKeys.sst.aws.KvKeys created (1s) 
+@ updating....
+ +  pulumi-nodejs:dynamic:Resource samplebookAssetFiles.sst.aws.BucketFiles created (1s) 
+@ updating....
+ +  aws:cloudfront:Function samplebookCloudfrontFunctionRequest created (3s) 
+ +  aws:cloudfront:Distribution samplebookCdnDistribution creating (0s) 
+@ updating....
+ +  aws:cloudfront:Distribution samplebookCdnDistribution created (1s) 
+ +  pulumi:pulumi:Stack samplebook-production creating (22s) warning: Undefined value (devUrl) will not show as a stack output.
+ +  pulumi-nodejs:dynamic:Resource samplebookInvalidation.sst.aws.DistributionInvalidation creating (0s) 
+ +  pulumi-nodejs:dynamic:Resource samplebookCdnWaiter.sst.aws.DistributionDeploymentWaiter creating (0s) 
+@ updating........................
+ +  pulumi-nodejs:dynamic:Resource samplebookInvalidation.sst.aws.DistributionInvalidation created (21s) 
+@ updating.....................................................................................................................................................................
+ +  pulumi-nodejs:dynamic:Resource samplebookCdnWaiter.sst.aws.DistributionDeploymentWaiter created (182s) 
+ +  pulumi:pulumi:Stack samplebook-production created (205s) 1 warning
+Diagnostics:
+  pulumi:pulumi:Stack (samplebook-production):
+    warning: Undefined value (devUrl) will not show as a stack output.
+
+Outputs:
+    _protect     : false
+    bucket       : {
+        bucket         : {
+            accelerationStatus                : ""
+            acl                               : <null>
+            arn                               : "arn:aws:s3:::samplebook-production-samplebookassetsbucket-bxucvsnh"
+            bucket                            : "samplebook-production-samplebookassetsbucket-bxucvsnh"
+            bucketDomainName                  : "samplebook-production-samplebookassetsbucket-bxucvsnh.s3.amazonaws.com"
+            bucketPrefix                      : ""
+            bucketRegionalDomainName          : "samplebook-production-samplebookassetsbucket-bxucvsnh.s3.us-east-1.amazonaws.com"
+            corsRules                         : []
+            forceDestroy                      : true
+            grants                            : [
+                [0]: {
+                    id         : "911da1ca62857c0f95274fafdc91b61665cac1fab8879122ae9f3a67fc599766"
+                    permissions: [
+                        [0]: "FULL_CONTROL"
+                    ]
+                    type       : "CanonicalUser"
+                    uri        : ""
+                }
+            ]
+            hostedZoneId                      : "Z3AQBSTGFYJSTF"
+            id                                : "samplebook-production-samplebookassetsbucket-bxucvsnh"
+            lifecycleRules                    : []
+            loggings                          : []
+            objectLockConfiguration           : <null>
+            objectLockEnabled                 : false
+            policy                            : ""
+            region                            : "us-east-1"
+            replicationConfigurations         : []
+            requestPayer                      : "BucketOwner"
+            serverSideEncryptionConfigurations: [
+                [0]: {
+                    rules: [
+                        [0]: {
+                            applyServerSideEncryptionByDefaults: [
+                                [0]: {
+                                    kmsMasterKeyId: ""
+                                    sseAlgorithm  : "AES256"
+                                }
+                            ]
+                            bucketKeyEnabled                   : false
+                        }
+                    ]
+                }
+            ]
+            tags                              : {
+                sst:app  : "samplebook"
+                sst:stage: "production"
+            }
+            tagsAll                           : {
+                sst:app  : "samplebook"
+                sst:stage: "production"
+            }
+            urn                               : "urn:pulumi:production::samplebook::sst:aws:StaticSite$sst:aws:Bucket$aws:s3/bucketV2:BucketV2::samplebookAssetsBucket"
+            versionings                       : [
+                [0]: {
+                    enabled  : false
+                    mfaDelete: false
+                }
+            ]
+            websiteDomain                     : <null>
+            websiteEndpoint                   : <null>
+            websites                          : []
+        }
+        componentName  : "samplebookAssets"
+        componentType  : "sst:aws:Bucket"
+        constructorName: "samplebookAssets"
+        constructorOpts: {
+            parent        : "urn:pulumi:production::samplebook::sst:aws:StaticSite::samplebook"
+            retainOnDelete: false
+        }
+        isSubscribed   : false
+        urn            : "urn:pulumi:production::samplebook::sst:aws:StaticSite$sst:aws:Bucket::samplebookAssets"
+    }
+    cdn          : {
+        componentName: "samplebookCdn"
+        componentType: "sst:aws:CDN"
+        distribution : {
+            aliases                     : <null>
+            arn                         : "arn:aws:cloudfront::484907507404:distribution/E3QKYPW17Z8YC5"
+            callerReference             : "terraform-20251024015615873000000001"
+            comment                     : "samplebook site"
+            continuousDeploymentPolicyId: ""
+            customErrorResponses        : []
+            defaultCacheBehavior        : {
+                allowedMethods            : [
+                    [0]: "DELETE"
+                    [1]: "GET"
+                    [2]: "HEAD"
+                    [3]: "OPTIONS"
+                    [4]: "PATCH"
+                    [5]: "POST"
+                    [6]: "PUT"
+                ]
+                cachePolicyId             : "658327ea-f89d-4fab-a63d-7e88639e58f6"
+                cachedMethods             : [
+                    [0]: "GET"
+                    [1]: "HEAD"
+                ]
+                compress                  : true
+                defaultTtl                : 0
+                fieldLevelEncryptionId    : ""
+                forwardedValues           : <null>
+                functionAssociations      : [
+                    [0]: {
+                        eventType  : "viewer-request"
+                        functionArn: "arn:aws:cloudfront::484907507404:function/samplebo-production-samplebookCloudfrontFunctionRequest-trbuczhv"
+                    }
+                ]
+                lambdaFunctionAssociations: []
+                maxTtl                    : 0
+                minTtl                    : 0
+                originRequestPolicyId     : ""
+                realtimeLogConfigArn      : ""
+                responseHeadersPolicyId   : ""
+                smoothStreaming           : false
+                targetOriginId            : "default"
+                trustedKeyGroups          : []
+                trustedSigners            : []
+                viewerProtocolPolicy      : "redirect-to-https"
+            }
+            defaultRootObject           : ""
+            domainName                  : "d33jc2i5py4gxl.cloudfront.net"
+            enabled                     : true
+            etag                        : "E27B28CM1OS30P"
+            hostedZoneId                : "Z2FDTNDATAQYW2"
+            httpVersion                 : "http2"
+            id                          : "E3QKYPW17Z8YC5"
+            inProgressValidationBatches : 0
+            isIpv6Enabled               : false
+            lastModifiedTime            : "2025-10-24 01:56:16.346 +0000 UTC"
+            loggingConfig               : <null>
+            orderedCacheBehaviors       : []
+            originGroups                : []
+            origins                     : [
+                [0]: {
+                    connectionAttempts   : 3
+                    connectionTimeout    : 10
+                    customHeaders        : []
+                    customOriginConfig   : {
+                        httpPort              : 80
+                        httpsPort             : 443
+                        originKeepaliveTimeout: 5
+                        originProtocolPolicy  : "https-only"
+                        originReadTimeout     : 20
+                        originSslProtocols    : [
+                            [0]: "TLSv1.2"
+                        ]
+                    }
+                    domainName           : "placeholder.sst.dev"
+                    originAccessControlId: ""
+                    originId             : "default"
+                    originPath           : ""
+                    originShield         : <null>
+                    s3OriginConfig       : <null>
+                    vpcOriginConfig      : <null>
+                }
+            ]
+            priceClass                  : "PriceClass_All"
+            restrictions                : {
+                geoRestriction: {
+                    locations      : []
+                    restrictionType: "none"
+                }
+            }
+            retainOnDelete              : false
+            staging                     : false
+            status                      : "InProgress"
+            tags                        : {
+                sst:app  : "samplebook"
+                sst:stage: "production"
+            }
+            tagsAll                     : {
+                sst:app  : "samplebook"
+                sst:stage: "production"
+            }
+            trustedKeyGroups            : [
+                [0]: {
+                    enabled: false
+                    items  : []
+                }
+            ]
+            trustedSigners              : [
+                [0]: {
+                    enabled: false
+                    items  : []
+                }
+            ]
+            urn                         : "urn:pulumi:production::samplebook::sst:aws:StaticSite$sst:aws:CDN$aws:cloudfront/distribution:Distribution::samplebookCdnDistribution"
+            viewerCertificate           : {
+                acmCertificateArn           : ""
+                cloudfrontDefaultCertificate: true
+                iamCertificateId            : ""
+                minimumProtocolVersion      : "TLSv1"
+                sslSupportMethod            : ""
+            }
+            waitForDeployment           : false
+            webAclId                    : ""
+        }
+        urn          : "urn:pulumi:production::samplebook::sst:aws:StaticSite$sst:aws:CDN::samplebookCdn"
+    }
+    componentName: "samplebook"
+    componentType: "sst:aws:StaticSite"
+    prodUrl      : "https://d33jc2i5py4gxl.cloudfront.net"
+    urn          : "urn:pulumi:production::samplebook::sst:aws:StaticSite::samplebook"
+
+Resources:
+    + 17 created
+
+Duration: 3m26s
+

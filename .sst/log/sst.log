@@ -1,0 +1,73 @@
+time=2025-10-23T18:55:44.754-07:00 level=INFO msg="checking for pulumi" path="/Users/parsa/Library/Application Support/sst/bin/pulumi"
+time=2025-10-23T18:55:44.878-07:00 level=INFO msg="checking for bun" path="/Users/parsa/Library/Application Support/sst/bin/bun"
+time=2025-10-23T18:55:44.916-07:00 level=INFO msg="initializing project" version=3.17.14
+time=2025-10-23T18:55:44.916-07:00 level=INFO msg="esbuild building" out=/Users/parsa/Documents/sample/.sst/platform/sst.config.1761270944916.mjs
+time=2025-10-23T18:55:44.918-07:00 level=INFO msg="esbuild built" outfile=/Users/parsa/Documents/sample/.sst/platform/sst.config.1761270944916.mjs
+time=2025-10-23T18:55:44.918-07:00 level=INFO msg="evaluating config"
+time=2025-10-23T18:55:44.966-07:00 level=INFO msg="config evaluated"
+time=2025-10-23T18:55:44.966-07:00 level=INFO msg="checking platform"
+time=2025-10-23T18:55:44.966-07:00 level=ERROR msg="open /Users/parsa/Documents/sample/.sst/platform/version: no such file or directory"
+time=2025-10-23T18:55:44.967-07:00 level=INFO msg="installing platform"
+time=2025-10-23T18:55:45.025-07:00 level=INFO msg="installing deps"
+time=2025-10-23T18:55:45.026-07:00 level=INFO msg="getting package" name=@sst-provider/aws version=latest
+time=2025-10-23T18:55:45.266-07:00 level=INFO msg="getting package" name=@pulumi/aws version=latest
+time=2025-10-23T18:55:45.443-07:00 level=INFO msg="writing package.json"
+time=2025-10-23T18:55:45.443-07:00 level=INFO msg="adding dependency" name=aws
+time=2025-10-23T18:55:45.444-07:00 level=INFO msg="fetching deps"
+time=2025-10-23T18:55:48.973-07:00 level=INFO msg="writing types"
+time=2025-10-23T18:55:48.974-07:00 level=INFO msg="loading home"
+time=2025-10-23T18:55:48.976-07:00 level=INFO msg="aws credentials found" region=us-east-1 profile=""
+time=2025-10-23T18:55:48.976-07:00 level=INFO msg="fetching bootstrap"
+time=2025-10-23T18:55:49.404-07:00 level=INFO msg="found existing bootstrap" data="{\"version\":5,\"asset\":\"sst-asset-acchazwvnond\",\"assetEcrRegistryId\":\"484907507404\",\"assetEcrUrl\":\"484907507404.dkr.ecr.us-east-1.amazonaws.com/sst-asset\",\"state\":\"sst-state-acchazwvnond\",\"appsyncHttp\":\"\",\"appsyncRealtime\":\"\"}"
+time=2025-10-23T18:55:49.404-07:00 level=INFO msg="loaded config" app=samplebook stage=production
+time=2025-10-23T18:55:49.404-07:00 level=INFO msg="initializing ui" isTTY=false
+time=2025-10-23T18:55:49.404-07:00 level=INFO msg="server port assigned" port=13557
+time=2025-10-23T18:55:49.404-07:00 level=INFO msg="running stack command" service=project.run cmd=deploy
+time=2025-10-23T18:55:49.404-07:00 level=INFO msg=starting service=server
+time=2025-10-23T18:55:49.404-07:00 level=INFO msg="INFO locking app=samplebook stage=production"
+time=2025-10-23T18:55:49.404-07:00 level=INFO msg="INFO getting data key=lock app=samplebook stage=production"
+time=2025-10-23T18:55:49.405-07:00 level=INFO msg=server service=server addr=0.0.0.0:13557
+time=2025-10-23T18:55:50.420-07:00 level=INFO msg="INFO putting update app=samplebook stage=production"
+time=2025-10-23T18:55:50.826-07:00 level=INFO msg="INFO getting passphrase app=samplebook stage=production"
+time=2025-10-23T18:55:51.242-07:00 level=INFO msg="INFO passphrase not found, setting passphrase app=samplebook stage=production"
+time=2025-10-23T18:55:51.692-07:00 level=INFO msg="INFO pulling state app=samplebook stage=production out=/Users/parsa/Documents/sample/.sst/pulumi/fe65ec1219e3d27113cdc8e7/.pulumi/stacks/samplebook/production.json"
+time=2025-10-23T18:55:52.617-07:00 level=INFO msg="got previous deployment" service=project.run updateID=fe65ec1219e3d27113cdc8e7
+time=2025-10-23T18:55:52.617-07:00 level=INFO msg="esbuild building" out=/Users/parsa/Documents/sample/.sst/platform/sst.config.1761270951690.mjs
+time=2025-10-23T18:55:52.647-07:00 level=INFO msg="esbuild built" outfile=/Users/parsa/Documents/sample/.sst/platform/sst.config.1761270951690.mjs
+time=2025-10-23T18:55:52.651-07:00 level=INFO msg="built sst.config.ts" service=project.run updateID=fe65ec1219e3d27113cdc8e7 to=/Users/parsa/Documents/sample/.sst/platform/sst.config.1761270951690.mjs
+time=2025-10-23T18:55:52.653-07:00 level=INFO msg="tracked files" service=project.run updateID=fe65ec1219e3d27113cdc8e7
+time=2025-10-23T18:55:52.653-07:00 level=INFO msg="INFO getting data key=secret app=samplebook stage=_fallback"
+time=2025-10-23T18:55:52.653-07:00 level=INFO msg="INFO getting data key=secret app=samplebook stage=production"
+time=2025-10-23T18:55:53.215-07:00 level=INFO msg="starting pulumi" service=project.run updateID=fe65ec1219e3d27113cdc8e7 args="[/Users/parsa/Library/Application Support/sst/bin/pulumi up --yes -f --stack organization/samplebook/production --non-interactive --event-log /Users/parsa/Documents/sample/.sst/pulumi/fe65ec1219e3d27113cdc8e7/eventlog.json --config aws:defaultTags={\"tags\":{\"sst:app\":\"samplebook\",\"sst:stage\":\"production\"}} --config aws:region=us-east-1]"
+time=2025-10-23T18:55:55.443-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:55:56.552-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:55:59.584-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:00.294-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:00.986-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:12.506-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:12.784-07:00 level=INFO msg="rpc request" method=POST url=/rpc
+time=2025-10-23T18:56:12.790-07:00 level=INFO msg="rpc request" method=POST url=/rpc
+time=2025-10-23T18:56:13.428-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:13.984-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:14.670-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:15.930-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:17.077-07:00 level=INFO msg="rpc request" method=POST url=/rpc
+time=2025-10-23T18:56:17.082-07:00 level=INFO msg="rpc request" method=POST url=/rpc
+time=2025-10-23T18:56:17.138-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:56:38.403-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:59:20.000-07:00 level=INFO msg="pulumi exited" service=project.run updateID=fe65ec1219e3d27113cdc8e7 err=<nil>
+time=2025-10-23T18:59:20.000-07:00 level=INFO msg="eof and exited" service=project.run updateID=fe65ec1219e3d27113cdc8e7 eofs=0
+time=2025-10-23T18:59:20.000-07:00 level=INFO msg="eof and exited" service=project.run updateID=fe65ec1219e3d27113cdc8e7 eofs=1
+time=2025-10-23T18:59:20.000-07:00 level=INFO msg="breaking out of tail loop" service=project.run updateID=fe65ec1219e3d27113cdc8e7
+time=2025-10-23T18:59:20.000-07:00 level=INFO msg="parsing state" service=project.run updateID=fe65ec1219e3d27113cdc8e7
+time=2025-10-23T18:59:20.000-07:00 level=INFO msg="INFO pushing partial state updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:59:20.002-07:00 level=INFO msg="generating types" root=/Users/parsa/Documents/sample
+time=2025-10-23T18:59:20.003-07:00 level=INFO msg="canceling partial" service=project.run updateID=fe65ec1219e3d27113cdc8e7
+time=2025-10-23T18:59:20.003-07:00 level=INFO msg="waiting for partial to exit" service=project.run updateID=fe65ec1219e3d27113cdc8e7
+time=2025-10-23T18:59:20.658-07:00 level=INFO msg="INFO pushing snapshot updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:59:20.658-07:00 level=INFO msg="INFO pushing eventlog updateID=fe65ec1219e3d27113cdc8e7"
+time=2025-10-23T18:59:21.561-07:00 level=INFO msg="INFO putting update app=samplebook stage=production"
+time=2025-10-23T18:59:22.176-07:00 level=INFO msg="done running stack command" service=project.run updateID=fe65ec1219e3d27113cdc8e7 resources=20
+time=2025-10-23T18:59:22.181-07:00 level=INFO msg="INFO unlocking app=samplebook stage=production"
+time=2025-10-23T18:59:22.807-07:00 level=INFO msg="shutting down server" service=server
+time=2025-10-23T18:59:22.807-07:00 level=INFO msg="server done" service=server

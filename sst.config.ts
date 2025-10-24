@@ -3,17 +3,21 @@
 export default $config({
   app(input) {
     return {
-      name: "aws-static-site",
+      name: "samplebook",
       home: "aws",
       removal: input?.stage === "production" ? "retain" : "remove",
     };
   },
   async run() {
     try {
-      return new sst.aws.StaticSite("MySite", {
+      return new sst.aws.StaticSite("samplebook", {
         build: {
           command: "npx metrists build -o out",
           output: "out",
+        },
+        invalidation: {
+          paths: "all",
+          wait: true,
         },
       });
     } catch (e) {

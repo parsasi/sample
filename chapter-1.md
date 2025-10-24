@@ -6,6 +6,6 @@ date: "2025-09-03"
 updated: "2025-09-03"
 ---
 
-# Welcome to Slides
+# Welcome to Metrists
 
-A terminal based presentation tool. Some dummy changes. Retrying.
+A terminal based publishing. Some dummy changes. Retrying.
