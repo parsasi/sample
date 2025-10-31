@@ -6,4 +6,4 @@ date: "2025-09-03"
 updated: "2025-09-03"
 ---
 
-It all started from VanJs.
+It all started from VanJs. Happy Halloween!
